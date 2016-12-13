@@ -12,20 +12,16 @@ function change() {
 
 function login() {
   var userName= $('#usr').val()
-  var password= $('#pwd').val()
   var user = store.get(userName);
   console.log('in login');
   if(user){
-    if(user.password !== password){
-      alert("Incorrect Login, please try again");
-      return;
-    }
-    else{
-      console.log('success');
-      console.log(user);
-    }
+    console.log(user);
+    console.log('success');
+    /*CODE FOR SUCCESSFUL LOGIN GOES HERE*/
   }
-  /*CODE FOR SUCCESSFUL LOGIN GOES HERE*/
+  else{
+    alert("This username does not exist")
+  }
   return;
 }
 
@@ -37,13 +33,8 @@ function joinUser() {
   var email= $('#email').val()
   var address= $('#address').val()
 
-  if(confirmPass !== password){
-    alert("Your passwords don't match, please update and try again");
-    setValues(name, userName, password, confirmPass, email, address);
-    return;
-  }
 
-  if(!name || !userName || !password || !confirmPass || !email || !address){
+  if(!name || !userName || !email || !address){
     alert("Please fill in all fields")
     setValues(name, userName, password, confirmPass, email, address);
     return;

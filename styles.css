@@ -1,6 +1,6 @@
 
 body{
-
+background-color: violet;
 }
 #login{
   text-align: center;
@@ -40,6 +40,9 @@ body{
   margin: 0;
 }
 
+#required{
+  text-align: center;
+}
 .form-group{
   width: 80%;
   margin: 0 auto;
