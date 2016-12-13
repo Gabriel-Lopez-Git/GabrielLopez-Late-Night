@@ -1,3 +1,15 @@
+function change() {
+
+  if(document.getElementById('loginPage').style.display == 'none'){
+    document.getElementById('loginPage').style.display = 'block'
+    document.getElementById('newUserPage').style.display = 'none'
+  }
+  else{
+    document.getElementById('loginPage').style.display = 'none'
+    document.getElementById('newUserPage').style.display = 'block'
+  }
+}
+
 function login() {
   var userName= $('#usr').val()
   var password= $('#pwd').val()
@@ -10,21 +22,11 @@ function login() {
     }
     else{
       console.log('success');
+      console.log(user);
     }
   }
   /*CODE FOR SUCCESSFUL LOGIN GOES HERE*/
-}
-
-function change() {
-
-  if(document.getElementById('loginPage').style.display == 'none'){
-    document.getElementById('loginPage').style.display = 'block'
-    document.getElementById('newUserPage').style.display = 'none'
-  }
-  else{
-    document.getElementById('loginPage').style.display = 'none'
-    document.getElementById('newUserPage').style.display = 'block'
-  }
+  return;
 }
 
 function joinUser() {
