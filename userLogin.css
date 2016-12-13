@@ -2,6 +2,11 @@
 body{
 background-color: violet;
 }
+
+#lateNight{
+  font: 'Petit Formal Script';
+  color: #2b2b2b;
+}
 #login{
   text-align: center;
   padding-left: 5vh;
@@ -19,15 +24,6 @@ background-color: violet;
 #join{
   padding-left: 5vh;
   padding-right: 5vh;
-}
-
-#usr{
-  width: 40vh;
-}
-
-#pwd{
-  width: 40vh;
-
 }
 
 #signupHeader{

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></link>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://www.javascriptoo.com/application/html/js/marcuswestin/store.js/store.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Petit+Formal+Script"/>
+  <script src="userLogin.js"></script>
+  <link href="userLogin.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id='loginPage' style='display: block'>
+    <br>
+  <h1 style='text-align: center'><span id='lateNight'>Late Night!</span> </h1>
+  <br><br>
+      <div class="form-group">
+        <input type="text" class="form-control" id="usr" placeholder='Username'>
+      </div>
+
+    <br><br>
+    <div id='btnDiv'>
+      <button class='btn btn-primary' id='login' onclick='login()'>Login</button>
+    </div>
+    <br><br>
+    <h5 style='text-align: center'>Don't have an account? Join <a onclick="change()">here!</a></h5>
+  </div>
+
+  <div id='newUserPage' style='display: none'>
+    <h4 id='backButton'><a onclick='change()'> Back </a></h4>
+    <h4 id='signupHeader'>Welcome to Late Night!</h4>
+    <br>
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder='Name*'>
+      </div>
+          <br>
+      <div class="form-group">
+        <input type="text" class="form-control" id="username" placeholder='User name*'>
+      </div>
+          <br>
+      <div class="form-group">
+        <input type="text" class="form-control" id="email" placeholder='Email*'>
+      </div>
+          <br>
+      <div class="form-group">
+        <input type="text" class="form-control" id="address" placeholder='Address*'>
+      </div>
+
+    </form>
+    <h5 id='required'>* Required</h5>
+    <br>
+      <div id='joinDiv'>
+        <button class='btn btn-primary' id='join' onclick="joinUser()">Join!</button>
+      </div>
+
+  </div>
+</body>
+</html>

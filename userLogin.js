@@ -11,13 +11,15 @@ function change() {
 }
 
 function login() {
-  var userName= $('#usr').val()
+  var userName= $('#usr').val().toLowerCase()
   var user = store.get(userName);
   console.log('in login');
   if(user){
     console.log(user);
     console.log('success');
     /*CODE FOR SUCCESSFUL LOGIN GOES HERE*/
+    window.location.href = 'index.html'
+    console.log($('#test').val());
   }
   else{
     alert("This username does not exist")
@@ -27,9 +29,7 @@ function login() {
 
 function joinUser() {
   var name = $('#name').val()
-  var userName= $('#username').val()
-  var password= $('#password').val()
-  var confirmPass= $('#confirmpwd').val()
+  var userName= $('#username').val().toLowerCase()
   var email= $('#email').val()
   var address= $('#address').val()
 
@@ -40,10 +40,15 @@ function joinUser() {
     return;
   }
 
+  if(store.get(userName)){
+    alert('Username is already taken, please choose another');
+    setValues(name, userName, password, confirmPass, email, address);
+    return;
+  }
+
   store.set(userName,
   {
     name: name,
-    password: password,
     email: email,
     address: address
   })
